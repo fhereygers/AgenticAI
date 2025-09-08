@@ -1,0 +1,31 @@
+product_type,product_name,offer_detail,interest_rate,duration_months
+Credit Card,Gold Card,No annual fee for 1 year,2.5,12
+Credit Card,Gold Card,Free airport lounge access,2.75,24
+Credit Card,Platinum Card,0% interest for 6 months,1.99,12
+Credit Card,Platinum Card,Get AED 500 cashback,3.5,18
+Credit Card,Rewards Card,Reduced processing fees,2.2,24
+Credit Card,Rewards Card,Free insurance included,3.1,36
+Credit Card,Cashback Card,Flexible repayment terms,2,18
+Credit Card,Cashback Card,Pre-approved within 2 hours,3.25,12
+Credit Card,Travel Card,Special rate for expats,2.9,24
+Credit Card,Travel Card,No annual fee for 1 year,2.65,36
+Personal Loan,Quick Loan,Get AED 500 cashback,4.5,36
+Personal Loan,Quick Loan,Pre-approved within 2 hours,3.9,24
+Personal Loan,Instant Personal Loan,Flexible repayment terms,4.1,48
+Personal Loan,Instant Personal Loan,Free insurance included,3.75,36
+Personal Loan,Salary Loan,Special rate for expats,4,60
+Personal Loan,Salary Loan,Reduced processing fees,3.6,24
+Personal Loan,Flexible Loan,Free airport lounge access,4.2,36
+Personal Loan,Flexible Loan,No annual fee for 1 year,3.95,24
+Personal Loan,Secure Loan,Up to 90% financing,4.3,60
+Personal Loan,Secure Loan,Get AED 500 cashback,3.8,48
+Home Loan,Fixed Rate Home Loan,Fixed rate up to 5 years,2.9,240
+Home Loan,Fixed Rate Home Loan,No processing fee,3.2,120
+Home Loan,Variable Rate Home Loan,Special rate for expats,2.75,180
+Home Loan,Variable Rate Home Loan,Free insurance included,3.1,240
+Home Loan,First Home Loan,Pre-approved within 2 hours,2.85,180
+Home Loan,First Home Loan,Flexible repayment terms,3,240
+Home Loan,Construction Loan,Get AED 500 cashback,3.4,120
+Home Loan,Construction Loan,Reduced processing fees,2.95,180
+Home Loan,Buy-to-Let Loan,Free insurance included,3.6,240
+Home Loan,Buy-to-Let Loan,Special rate for expats,3.2,180

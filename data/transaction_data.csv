@@ -1,0 +1,251 @@
+txn_id,customer_id,txn_date,amount,category,merchant
+e64d1bcb,CUST001,2025-05-04,1342.37,dining,Netflix
+3985c3cf,CUST001,2025-03-21,1864.88,groceries,Lulu
+8dcdcd03,CUST001,2025-04-06,543.64,groceries,Lulu
+122c9a56,CUST001,2025-05-22,559.25,dining,Amazon
+114125c6,CUST001,2025-06-10,1440.87,electronics,Netflix
+1223b513,CUST002,2025-05-03,1020.71,fuel,Carrefour
+7c441fe7,CUST002,2025-04-04,202.75,travel,Netflix
+ef7ddc76,CUST002,2025-06-08,107.29,fuel,Lulu
+3e351128,CUST002,2025-05-30,1281.48,fuel,Lulu
+30beb45f,CUST002,2025-03-24,1487.64,dining,Emirates
+5ab33edf,CUST003,2025-04-25,1130.6,groceries,Sharaf DG
+baa4b71a,CUST003,2025-03-20,1891.2,entertainment,Lulu
+a56c0941,CUST003,2025-03-24,1100.27,utilities,Talabat
+56dc8907,CUST003,2025-05-31,1173.37,electronics,Emirates
+310c0c00,CUST003,2025-04-02,272.34,fuel,Talabat
+6c006f61,CUST004,2025-04-01,1799.98,utilities,Carrefour
+dfde4fbf,CUST004,2025-06-12,1799.87,electronics,Amazon
+dc815fe7,CUST004,2025-06-06,1340.53,fuel,Emirates
+a6f2f7b8,CUST004,2025-05-06,1948.2,entertainment,Lulu
+17e011b7,CUST004,2025-06-12,1853.01,electronics,Lulu
+2a935d62,CUST005,2025-04-23,1952.89,utilities,Lulu
+dd59ba71,CUST005,2025-04-22,1765.2,groceries,Lulu
+610461e3,CUST005,2025-03-15,1478.4,fuel,Emirates
+ed3049cf,CUST005,2025-05-30,1608.43,utilities,Amazon
+6c4a37ea,CUST005,2025-05-21,548.28,utilities,Sharaf DG
+c88a618e,CUST006,2025-05-07,777.43,groceries,Zara
+27a0c3d7,CUST006,2025-04-02,460.42,utilities,Zara
+0ef8c2d6,CUST006,2025-05-10,712.32,utilities,Amazon
+bf7b539b,CUST006,2025-04-14,461.39,entertainment,Amazon
+7a0ecfea,CUST006,2025-05-02,808.96,fuel,Sharaf DG
+284d82e5,CUST007,2025-03-20,1934.44,fuel,Talabat
+d9f195d0,CUST007,2025-04-02,1290.13,travel,Talabat
+acdabacc,CUST007,2025-06-06,1879.69,groceries,Netflix
+f10c718b,CUST007,2025-06-09,373.56,fuel,Carrefour
+98326856,CUST007,2025-03-18,234.64,travel,Talabat
+a8499b92,CUST008,2025-05-10,1462.52,fuel,Emirates
+ef48e8d5,CUST008,2025-04-09,1220.29,dining,Sharaf DG
+506e5a9a,CUST008,2025-04-07,782.69,dining,Amazon
+abf3e3fc,CUST008,2025-05-16,524.35,entertainment,Emirates
+edd4253b,CUST008,2025-05-26,23.35,utilities,Amazon
+75523327,CUST009,2025-05-14,741.16,groceries,Talabat
+19985f15,CUST009,2025-03-22,1253.85,entertainment,Sharaf DG
+43e42caf,CUST009,2025-03-27,1445.11,fuel,Netflix
+119c4ea3,CUST009,2025-06-08,1340.45,fuel,Emirates
+286218b8,CUST009,2025-04-26,1400.47,dining,Lulu
+4d71c366,CUST010,2025-05-13,399.84,entertainment,Emirates
+a76afde6,CUST010,2025-05-05,1361.09,electronics,Netflix
+8dfa6a56,CUST010,2025-04-13,824.03,utilities,Carrefour
+f05db76e,CUST010,2025-06-08,621.67,electronics,Emirates
+e3c43657,CUST010,2025-03-25,1575.8,dining,Talabat
+45b89cd9,CUST011,2025-04-11,940.68,travel,Amazon
+57c700aa,CUST011,2025-04-03,1032.12,utilities,Lulu
+439472e6,CUST011,2025-05-03,1324.52,fuel,Talabat
+e87d1c78,CUST011,2025-06-05,204.91,utilities,Amazon
+6c6f7633,CUST011,2025-06-03,1352.14,electronics,Amazon
+5563f616,CUST012,2025-05-28,311.76,groceries,Amazon
+430f801d,CUST012,2025-03-30,1968.19,dining,Sharaf DG
+b4a69f3c,CUST012,2025-04-25,921.72,entertainment,Amazon
+13432e61,CUST012,2025-06-08,1442.32,travel,Zara
+8babce3b,CUST012,2025-03-18,811.31,electronics,Carrefour
+8d7248e2,CUST013,2025-03-29,1787.47,utilities,Sharaf DG
+4eea04e7,CUST013,2025-04-19,1561.27,electronics,Lulu
+f8e1daa7,CUST013,2025-06-06,1612.14,entertainment,Zara
+35c7936c,CUST013,2025-05-20,119.43,electronics,Sharaf DG
+5a8aaeca,CUST013,2025-05-29,923.79,utilities,Zara
+6808593f,CUST014,2025-05-14,1341.8,dining,Talabat
+ee0caeb5,CUST014,2025-04-06,1901.08,travel,Emirates
+ccc56569,CUST014,2025-06-01,1664.53,dining,Zara
+0658663a,CUST014,2025-04-01,1796.47,entertainment,Zara
+c84a7b28,CUST014,2025-04-23,911.14,utilities,Amazon
+bc2cbb0d,CUST015,2025-06-01,1682.93,fuel,Zara
+c991603f,CUST015,2025-05-22,1260.96,fuel,Zara
+09e9db0a,CUST015,2025-06-06,173.42,fuel,Amazon
+d10bd1d0,CUST015,2025-06-12,558.0,fuel,Sharaf DG
+d20eac17,CUST015,2025-05-31,293.98,electronics,Emirates
+060edf5b,CUST016,2025-05-18,1394.02,entertainment,Amazon
+475287aa,CUST016,2025-06-06,147.17,travel,Talabat
+4774bc58,CUST016,2025-04-18,1094.37,travel,Carrefour
+adf4e62d,CUST016,2025-06-04,429.53,travel,Emirates
+0710d430,CUST016,2025-03-26,1811.58,dining,Carrefour
+2db69edb,CUST017,2025-05-10,1716.33,utilities,Emirates
+09cb3942,CUST017,2025-03-25,964.42,fuel,Netflix
+ba81edd9,CUST017,2025-05-30,1511.88,utilities,Emirates
+fbf6e16f,CUST017,2025-05-03,1085.68,entertainment,Amazon
+939b462d,CUST017,2025-04-02,986.69,fuel,Emirates
+6fa17735,CUST018,2025-03-15,981.57,travel,Talabat
+89d7fd6c,CUST018,2025-05-20,1344.37,utilities,Emirates
+bcae8081,CUST018,2025-05-19,1453.88,utilities,Zara
+11e9cdaa,CUST018,2025-05-18,1840.69,dining,Carrefour
+505cc686,CUST018,2025-05-18,1815.72,dining,Carrefour
+e6697833,CUST019,2025-04-13,186.22,travel,Lulu
+688c7015,CUST019,2025-04-15,1736.37,electronics,Carrefour
+8dedf9fb,CUST019,2025-03-27,535.11,fuel,Amazon
+f0bbac67,CUST019,2025-04-20,920.3,fuel,Emirates
+2c8d0e44,CUST019,2025-05-13,570.95,utilities,Emirates
+8c459ce2,CUST020,2025-06-03,519.5,groceries,Zara
+35ce8841,CUST020,2025-04-25,58.38,dining,Carrefour
+a79ac9aa,CUST020,2025-04-15,1999.82,fuel,Amazon
+acf5e81e,CUST020,2025-04-04,1307.29,utilities,Carrefour
+e6b3c944,CUST020,2025-05-31,1513.38,electronics,Amazon
+15b52908,CUST021,2025-04-11,1681.67,dining,Lulu
+9e87e04c,CUST021,2025-04-16,492.32,travel,Sharaf DG
+c04a96c4,CUST021,2025-04-06,1136.66,electronics,Zara
+ce7ae7f6,CUST021,2025-04-03,1404.94,utilities,Talabat
+3eae0032,CUST021,2025-04-30,352.22,dining,Sharaf DG
+12a4def0,CUST022,2025-04-28,1560.03,electronics,Netflix
+935f2b0a,CUST022,2025-04-02,234.04,groceries,Netflix
+7e8f8095,CUST022,2025-04-22,1160.08,travel,Emirates
+b00805cc,CUST022,2025-03-15,1884.11,electronics,Sharaf DG
+c521bf2d,CUST022,2025-06-08,1192.35,utilities,Amazon
+3805f907,CUST023,2025-04-01,221.76,utilities,Netflix
+8498e113,CUST023,2025-04-29,1703.58,dining,Sharaf DG
+eadf5085,CUST023,2025-06-05,1596.53,dining,Carrefour
+cd29a36f,CUST023,2025-04-29,707.46,travel,Talabat
+8f15ba58,CUST023,2025-05-11,156.53,entertainment,Talabat
+e4347d51,CUST024,2025-04-26,45.05,travel,Zara
+e45b712e,CUST024,2025-05-03,228.97,fuel,Zara
+8c41561b,CUST024,2025-04-27,1420.47,travel,Lulu
+dc8aee30,CUST024,2025-04-30,1472.91,entertainment,Netflix
+3f4b1a70,CUST024,2025-06-04,1239.51,dining,Zara
+c715b2b9,CUST025,2025-05-04,940.45,utilities,Netflix
+464c04af,CUST025,2025-04-26,658.16,electronics,Sharaf DG
+3c07c574,CUST025,2025-04-10,572.28,travel,Amazon
+8a476a87,CUST025,2025-03-22,1505.94,dining,Emirates
+620e99d3,CUST025,2025-05-21,686.07,travel,Talabat
+10714d51,CUST026,2025-04-24,380.04,electronics,Talabat
+7746d0ba,CUST026,2025-04-24,1599.71,fuel,Netflix
+6b8e869f,CUST026,2025-04-21,1763.03,entertainment,Netflix
+f2311f17,CUST026,2025-05-21,1120.47,dining,Amazon
+c3fe0183,CUST026,2025-05-09,189.51,entertainment,Emirates
+f1578470,CUST027,2025-04-18,987.38,utilities,Amazon
+da7b9095,CUST027,2025-06-09,1387.41,entertainment,Zara
+89c8d2ab,CUST027,2025-05-26,907.39,groceries,Sharaf DG
+9a6ec2f5,CUST027,2025-06-10,602.59,travel,Amazon
+45df16b6,CUST027,2025-04-26,626.29,dining,Talabat
+560c95ee,CUST028,2025-05-18,957.06,dining,Talabat
+b963f37f,CUST028,2025-03-31,862.5,entertainment,Talabat
+20ac3703,CUST028,2025-05-14,716.58,travel,Netflix
+64de82e6,CUST028,2025-05-11,627.11,electronics,Sharaf DG
+157d94a1,CUST028,2025-05-16,1448.14,fuel,Sharaf DG
+7631de9d,CUST029,2025-04-01,1490.9,utilities,Lulu
+53cd6268,CUST029,2025-04-04,399.25,entertainment,Zara
+c2dff335,CUST029,2025-06-08,567.47,dining,Netflix
+f3821cfd,CUST029,2025-06-03,1961.41,utilities,Amazon
+14f7ce8d,CUST029,2025-04-29,606.57,fuel,Lulu
+0d557b61,CUST030,2025-04-17,618.49,entertainment,Lulu
+c7fee39f,CUST030,2025-05-17,563.14,groceries,Netflix
+f319c125,CUST030,2025-04-08,1400.89,electronics,Zara
+9f0fda8d,CUST030,2025-03-29,223.12,groceries,Netflix
+ab61a7b1,CUST030,2025-03-26,949.41,travel,Talabat
+770c7798,CUST031,2025-05-21,385.04,groceries,Netflix
+2af43ab7,CUST031,2025-05-12,1883.31,travel,Sharaf DG
+b7e6427c,CUST031,2025-03-26,1647.79,travel,Zara
+f6f7f0cc,CUST031,2025-04-14,166.68,entertainment,Carrefour
+edcb8cb6,CUST031,2025-04-14,320.42,utilities,Netflix
+f54ad0a2,CUST032,2025-04-20,188.66,electronics,Sharaf DG
+32c5bd89,CUST032,2025-03-22,1124.98,travel,Amazon
+a092f52a,CUST032,2025-04-07,1555.87,travel,Zara
+4d3485c5,CUST032,2025-06-05,1818.84,fuel,Emirates
+1efd76e9,CUST032,2025-05-31,624.65,dining,Carrefour
+0a8381be,CUST033,2025-04-17,1227.07,entertainment,Sharaf DG
+5eddbbbf,CUST033,2025-03-21,1896.23,electronics,Amazon
+033d2bce,CUST033,2025-06-05,544.0,groceries,Lulu
+1b049863,CUST033,2025-04-26,494.93,dining,Sharaf DG
+e43e4288,CUST033,2025-06-03,329.93,travel,Zara
+6f7c15ea,CUST034,2025-04-01,1384.95,travel,Netflix
+a6846099,CUST034,2025-04-10,84.63,fuel,Netflix
+89c5b31a,CUST034,2025-05-29,1411.92,travel,Sharaf DG
+d36357b6,CUST034,2025-05-24,1381.02,fuel,Amazon
+da09dfa0,CUST034,2025-04-07,861.78,dining,Amazon
+4767d76c,CUST035,2025-06-08,1302.32,fuel,Lulu
+76f72255,CUST035,2025-05-09,161.39,electronics,Netflix
+561e16d1,CUST035,2025-03-17,1198.19,utilities,Netflix
+2e8d0e87,CUST035,2025-05-01,889.52,travel,Netflix
+4223623b,CUST035,2025-04-17,1405.47,fuel,Zara
+b380c73a,CUST036,2025-06-08,886.76,dining,Carrefour
+8441aefd,CUST036,2025-04-02,1781.06,entertainment,Talabat
+680bac63,CUST036,2025-05-01,1215.35,groceries,Sharaf DG
+b0cbc61f,CUST036,2025-04-30,473.27,entertainment,Carrefour
+72bb912d,CUST036,2025-05-30,1999.15,entertainment,Netflix
+38ba8abc,CUST037,2025-04-23,1160.97,utilities,Lulu
+a9f948b2,CUST037,2025-05-10,951.59,entertainment,Zara
+87ea7ff5,CUST037,2025-04-17,1833.82,electronics,Emirates
+8ce6424d,CUST037,2025-04-16,1276.87,travel,Sharaf DG
+455ac762,CUST037,2025-04-13,950.62,travel,Talabat
+b8a6171f,CUST038,2025-04-02,655.7,groceries,Lulu
+892e6161,CUST038,2025-05-28,673.01,entertainment,Zara
+3764fbda,CUST038,2025-05-25,590.67,travel,Carrefour
+96ef2ad6,CUST038,2025-05-27,920.56,fuel,Netflix
+fb02bebb,CUST038,2025-03-24,660.08,utilities,Emirates
+3a3c563e,CUST039,2025-04-19,1732.52,utilities,Carrefour
+b540b30e,CUST039,2025-05-05,1322.17,dining,Zara
+f96b648a,CUST039,2025-03-20,838.23,electronics,Talabat
+f1afdb65,CUST039,2025-03-27,1252.82,travel,Zara
+7daa39f0,CUST039,2025-03-24,1524.78,electronics,Netflix
+48ca7651,CUST040,2025-04-29,1107.45,fuel,Zara
+2f32751e,CUST040,2025-03-19,1764.08,travel,Sharaf DG
+7a4c75d4,CUST040,2025-03-26,77.16,entertainment,Amazon
+7de31a51,CUST040,2025-03-22,1425.37,fuel,Carrefour
+0db95301,CUST040,2025-03-29,1113.46,groceries,Amazon
+f2f9e5fa,CUST041,2025-04-13,1984.67,groceries,Zara
+1e52d770,CUST041,2025-05-08,1895.18,entertainment,Lulu
+989bc4da,CUST041,2025-05-30,1006.78,entertainment,Netflix
+85c7504b,CUST041,2025-04-20,1027.57,fuel,Emirates
+4c1f55ab,CUST041,2025-06-06,1672.75,travel,Amazon
+4e2d6645,CUST042,2025-05-09,924.44,electronics,Emirates
+f5c9b047,CUST042,2025-05-25,397.41,dining,Lulu
+3531968d,CUST042,2025-05-14,1730.77,fuel,Emirates
+14c8b3b4,CUST042,2025-03-30,692.95,utilities,Netflix
+1337739e,CUST042,2025-03-30,1644.69,fuel,Netflix
+b07aa066,CUST043,2025-05-11,1678.2,dining,Zara
+3b4206c5,CUST043,2025-04-11,1733.22,travel,Zara
+dc0f2fcf,CUST043,2025-04-28,703.35,dining,Emirates
+ec856f37,CUST043,2025-04-09,921.58,fuel,Amazon
+96fc734d,CUST043,2025-05-18,1961.93,electronics,Emirates
+6cd5e859,CUST044,2025-03-26,482.45,utilities,Emirates
+26242b40,CUST044,2025-06-11,106.42,entertainment,Zara
+1247ea4e,CUST044,2025-03-20,1416.35,utilities,Emirates
+9854ce4e,CUST044,2025-05-26,784.44,entertainment,Lulu
+49e2623d,CUST044,2025-04-26,1000.75,groceries,Lulu
+4dd8eb85,CUST045,2025-05-21,1014.54,dining,Talabat
+801ef1da,CUST045,2025-05-06,1742.01,utilities,Zara
+9918ee46,CUST045,2025-03-18,217.43,travel,Carrefour
+5283aac7,CUST045,2025-05-12,1450.44,travel,Lulu
+3a9aca5e,CUST045,2025-05-19,168.16,utilities,Netflix
+964db03f,CUST046,2025-03-17,690.35,entertainment,Emirates
+d248a9a7,CUST046,2025-04-10,1306.68,utilities,Talabat
+c19ad58c,CUST046,2025-04-01,1707.64,utilities,Emirates
+7135f221,CUST046,2025-06-11,1909.2,entertainment,Zara
+95d82980,CUST046,2025-04-26,1747.32,groceries,Sharaf DG
+f8140102,CUST047,2025-03-23,484.85,entertainment,Netflix
+5553b2fe,CUST047,2025-04-15,1994.9,entertainment,Sharaf DG
+292bd156,CUST047,2025-04-16,879.26,groceries,Sharaf DG
+49c8a43f,CUST047,2025-05-18,898.48,entertainment,Netflix
+c2b01cfd,CUST047,2025-05-07,1808.78,groceries,Talabat
+50843242,CUST048,2025-04-08,1596.36,fuel,Talabat
+c5c5b37a,CUST048,2025-04-23,762.19,electronics,Amazon
+fcf56188,CUST048,2025-03-15,1071.71,dining,Lulu
+764414fd,CUST048,2025-04-24,356.57,groceries,Emirates
+5c9d927d,CUST048,2025-05-14,1247.03,electronics,Zara
+71299889,CUST049,2025-05-27,1827.4,electronics,Amazon
+8c99a894,CUST049,2025-03-27,933.08,fuel,Zara
+e17f29e1,CUST049,2025-05-21,525.55,groceries,Zara
+f920264c,CUST049,2025-05-15,1804.39,entertainment,Lulu
+b5b453ca,CUST049,2025-03-30,166.25,fuel,Netflix
+8d605936,CUST050,2025-04-23,1285.1,travel,Netflix
+d7665cda,CUST050,2025-06-11,924.53,fuel,Amazon
+1e1242e3,CUST050,2025-05-16,1998.76,utilities,Zara
+eec259dc,CUST050,2025-05-23,231.17,travel,Talabat
+45ff2c83,CUST050,2025-04-24,1158.13,entertainment,Netflix

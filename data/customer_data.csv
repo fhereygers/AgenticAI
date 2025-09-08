@@ -1,0 +1,51 @@
+customer_id,name,age,country,city,salary,income,current_balance,existing_loans
+CUST001,Allison Hill,37,UAE,Abu Dhabi,8819,6698,19628,credit_card
+CUST002,Noah Rhodes,24,UAE,Abu Dhabi,10848,7665,6952,none
+CUST003,Angie Henderson,23,Saudi Arabia,Jeddah,15623,10574,41781,credit_card
+CUST004,Daniel Wagner,39,Bahrain,Manama,15223,10004,5425,credit_card
+CUST005,Cristian Santos,35,Bahrain,Manama,19149,11436,27059,none
+CUST006,Connie Lawrence,44,UAE,Abu Dhabi,20449,10916,44565,personal_loan
+CUST007,Abigail Shaffer,46,UAE,Dubai,23054,15853,10164,personal_loan
+CUST008,Gina Moore,24,Kuwait,Kuwait City,14300,10676,48336,credit_card
+CUST009,Gabrielle Davis,28,Qatar,Doha,10614,8484,29911,personal_loan
+CUST010,Ryan Munoz,44,Oman,Muscat,19954,11112,18730,personal_loan
+CUST011,Monica Herrera,37,UAE,Abu Dhabi,13607,9347,15708,home_loan
+CUST012,Jamie Arnold,57,Bahrain,Manama,16845,14256,19392,personal_loan
+CUST013,Lisa Hensley,42,UAE,Dubai,15505,12212,31290,personal_loan
+CUST014,Michele Williams,58,UAE,Abu Dhabi,14913,12222,25622,credit_card
+CUST015,Dylan Miller,51,Oman,Muscat,20964,16973,14363,personal_loan
+CUST016,Brian Ramirez,56,Saudi Arabia,Riyadh,16081,12233,22219,home_loan
+CUST017,Holly Wood,30,Bahrain,Manama,19861,11455,38392,home_loan
+CUST018,Derek Zuniga,31,UAE,Abu Dhabi,9543,7647,46120,credit_card
+CUST019,Lisa Jackson,60,Bahrain,Manama,10081,6398,35674,personal_loan
+CUST020,Carla Gray,56,UAE,Dubai,11753,8680,22486,personal_loan
+CUST021,Margaret Hawkins DDS,51,UAE,Abu Dhabi,17617,11489,5212,personal_loan
+CUST022,Patty Perez,41,Saudi Arabia,Riyadh,24635,20186,46874,credit_card
+CUST023,Ethan Adams,56,Saudi Arabia,Riyadh,20252,15530,39757,none
+CUST024,Tommy Walter,45,Kuwait,Kuwait City,24010,12168,25153,credit_card
+CUST025,Matthew Foster,27,UAE,Dubai,15892,12829,10613,home_loan
+CUST026,Judy Baker,52,UAE,Abu Dhabi,12120,6604,41031,credit_card
+CUST027,Justin Baker,56,Qatar,Doha,21865,18312,18182,personal_loan
+CUST028,Stephanie Ross,55,Bahrain,Manama,20236,13220,34588,none
+CUST029,Zachary Hicks,23,Saudi Arabia,Jeddah,15362,8025,43555,credit_card
+CUST030,Anthony Rodriguez,25,Saudi Arabia,Jeddah,8235,4322,20003,none
+CUST031,Rebecca Henderson,37,UAE,Dubai,18827,9880,23250,home_loan
+CUST032,James Ferrell,58,Saudi Arabia,Jeddah,12335,9290,42762,home_loan
+CUST033,Tricia Valencia,34,Saudi Arabia,Jeddah,23498,18390,11181,none
+CUST034,Nathan Maldonado,51,Bahrain,Manama,19609,12711,8550,none
+CUST035,Debra Davidson,28,UAE,Dubai,21193,15998,21295,credit_card
+CUST036,Jeffrey Chavez,33,Saudi Arabia,Jeddah,22700,12463,23254,home_loan
+CUST037,Sherri Baker,57,Saudi Arabia,Jeddah,10470,6858,11416,none
+CUST038,Cassandra Gaines,37,UAE,Dubai,11056,9112,15899,home_loan
+CUST039,Elizabeth Fowler,47,Oman,Muscat,23773,13664,8842,credit_card
+CUST040,Brittany Farmer,38,Bahrain,Manama,8070,6818,34819,personal_loan
+CUST041,Paula Moreno,40,Bahrain,Manama,23947,13270,19267,none
+CUST042,Fred Smith,59,UAE,Dubai,18276,9503,36246,credit_card
+CUST043,Sherry Decker,33,UAE,Dubai,24640,13010,9490,none
+CUST044,Anthony Humphrey,58,Saudi Arabia,Jeddah,21230,11505,21135,none
+CUST045,Angelica Tucker,58,UAE,Abu Dhabi,21737,15869,39261,personal_loan
+CUST046,Philip Cannon,42,Qatar,Doha,14693,10790,20642,personal_loan
+CUST047,John Pierce,41,Bahrain,Manama,12288,9032,34964,personal_loan
+CUST048,Shane Henderson,58,UAE,Abu Dhabi,8305,5484,11552,none
+CUST049,Joshua Blair,44,Saudi Arabia,Jeddah,24576,14569,9508,credit_card
+CUST050,Eric Carney,56,Kuwait,Kuwait City,17338,9626,24825,none
