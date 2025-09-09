@@ -92,10 +92,9 @@ spark.sql("select count(*) from " + hive_table).show()
 # 
 # clean up
 #
-spark.sql("drop database onlinebankingfh").show()
 hive_table = hive_database + "." + "customer_profiles"
 spark.sql("drop table " + hive_database + "." + "customer_profiles").show()
 spark.sql("drop table " +  hive_database + "." + "product_offers").show()
 spark.sql("drop table " +  hive_database + "." + "transaction_data").show()
-spark.sql("drop database onlinebankingfh").show()
+spark.sql("drop database " + hive_database).show()
 
