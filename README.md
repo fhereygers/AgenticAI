@@ -69,6 +69,10 @@ A Workspace is a cluster that runs on a kubernetes service to provide teams of d
 - Go to “Projects” on the left side panel > Select “Public Projects” from the dropdown.
 - Click on the publicly available project named **AgenticAI**.
 
+<br/>
+<img src="images/pubproj.png" width="70%">
+ <br/>
+
 
 In a workspace, Projects view is the default and you’ll be presented with all public (within your organization) and your own projects, if any. In this lab we will be using an existing project AgenticAI.
 
