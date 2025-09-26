@@ -73,16 +73,40 @@ A Workspace is a cluster that runs on a kubernetes service to provide teams of d
 <img src="images/pubproj.png" width="70%">
  <br/>
 
+- Click on AI Studios > Agent Studio in the left menu
 
-In a workspace, Projects view is the default and you’ll be presented with all public (within your organization) and your own projects, if any. In this lab we will be using an existing project AgenticAI.
+<br/>
+<img src="images/agenticaihome.png" width="70%">
+ <br/>
 
-- Click on *AMPs* in the side panel and search for “workshop”
+blah blah
 
-![amps](images/amps.png)
+## Lab 2: Start creating workflow with agents
 
-- Click on the AMP card and then on *Configure Project*
+- Create 4 Agents
 
-![ampcard](images/ampcard.png)
+
+Create > Intelli Banking Workflow: 
+Configure: 
+Is Conversational: ON
+Manager Agent: ON
+Default Manager.
+
+
+Create 4 Agents: 
+Customer Analyst:
+Role: Customer Segmentation and Profiling Specialist.
+Backstory: Skilled in profiling and segmentation using customer data for personalized banking strategies.
+Goal: Identify customer personas based on income, balances, loans, and demographic data from customer_profiles table.
+
+
+  
+
+| Name | Customer Analyst |
+| ----------- | ----------- |
+| Role | Customer Segmentation and Profiling Specialist |
+| Backstory | Skilled in profiling and segmentation using customer data for personalized banking strategies. |
+| Goal | Identify customer personas based on income, balances, loans, and demographic data from customer_profiles table. |
 
 
 **IMPORTANT!**
