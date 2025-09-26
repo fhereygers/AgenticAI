@@ -83,6 +83,26 @@ blah blah
 
 ## Lab 2: Start creating workflow with agents
 
+Take a moment to get familiar with the Agent Studio application.
+
+In the top right corner you see four tabs: Agentic Workflow, Tools Catalog , LLMs and Feedback.
+
+By default you are in the Agentic Workflow tab, and below you find an overview of deployed workflows (if any), Draft workflows (if any any) and workflow templates.
+
+Workflow templates allow you to create a new workflow based upon a template. This is a sort of quick start or samples to give ideas on how to typically build workflows.
+
+<br/>
+<img src="images/agentstudiohome.png" width="70%">
+ <br/>
+
+However we are going to build a complete workflow from scratch (sorry about this :-))
+
+To do so, in the Agentic workflow tab:
+- click on the button **Create**
+- You are then asked to give a workflow name, so enter: "<your user name> Intelli Banking" and then click **Create Workflow** at the right bottom of the screen
+-  
+
+
 - Create 4 Agents
 
 
