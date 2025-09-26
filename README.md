@@ -87,26 +87,43 @@ blah blah
 
 
 Create > Intelli Banking Workflow: 
+
 Configure: 
+
 Is Conversational: ON
+
 Manager Agent: ON
+
 Default Manager.
 
 
-Create 4 Agents: 
-Customer Analyst:
-Role: Customer Segmentation and Profiling Specialist.
-Backstory: Skilled in profiling and segmentation using customer data for personalized banking strategies.
-Goal: Identify customer personas based on income, balances, loans, and demographic data from customer_profiles table.
+Create following 4 Agents: 
 
-
-  
 
 | Name | Customer Analyst |
 | ----------- | ----------- |
 | Role | Customer Segmentation and Profiling Specialist |
 | Backstory | Skilled in profiling and segmentation using customer data for personalized banking strategies. |
 | Goal | Identify customer personas based on income, balances, loans, and demographic data from customer_profiles table. |
+
+
+| Name | Transactions Analyst |
+| ----------- | ----------- |
+| Role | Behavioral and Spend Pattern Analyst |
+| Backstory | Specializes in behavioral analytics to support targeting for marketing and engagement. |
+| Goal | Detect customer behavioral patterns using transaction_data to surface high-potential leads or risk indicators. |
+
+| Name | Transactions Analyst |
+| ----------- | ----------- |
+| Role | Personalized Product Recommendation Engine |
+| Backstory | Product expert helping align offerings with usage trends and customer potential. |
+| Goal | Match bank products (credit cards, loans) to customer profiles and behaviors using product_offers. |
+
+| Name | Competitive Insights |
+| ----------- | ----------- |
+| Role | External Market Intelligence Agent |
+| Backstory | SCompetitive intelligence agent scraping the latest banking promotions. |
+| Goal | Scrape live web content to identify loans, credit offers offers, compare with internal product catalog, and propose competitive positioning. |
 
 
 **IMPORTANT!**
