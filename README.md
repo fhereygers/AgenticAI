@@ -173,13 +173,36 @@ For the Agent **Competitive Insights** select the tool **hol web scraper**
 <img src="images/configinput.png" width="70%">
  <br/>
 
+ Test the workflow with following test questions:
+ - How many customers do we have in Dubai?
+ - Who are the top spenders in the last 30 days?
+ - Who are the top 3 credit card customers based on their total spending?
+
+
+
 ## Lab 5  Deploy Workflow 
+
+Now Deploy your worklflow BUT also save your work as workflow template!
+
+Wait for the deployed workflow to be up and running.
+You can find your deployed workflow by:
+- Going to the Home Page of Agent Studios.
+- Select your Workflow from Deployed Workflows.
+- Click on Open Application UI.
+
+and then ask following questions:
+- which are the top 3 spending categories?
+- What are the credit card offers from barclays bank www.barclays.co.uk ?
+- Compare our credit card offers with barclays bank www.barclays.co.uk ?
+- Which customers are eligible for these offers and share their details?
 
 
 
 ## Lab 6 leverage MCP server instead of hol db tool
  
-
+- Create a new workflow, the template you saved in lab 5.
+- Replace for the relevant 3 agents the **hol db tool** with the mcp server that is available in your environment.
+- Test the workflow, by entering the previous questions.
 
 
 ----------------------------------------- THE END ----------------------
