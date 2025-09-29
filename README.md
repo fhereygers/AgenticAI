@@ -109,7 +109,7 @@ To do so, in the Agentic workflow tab:
  <br/>
 
 
- - Click on ** Create / Edits Agents, in order to create following 4 Agents, by filling out the fields accordingly (use the openai option for LLM): 
+ - Click on **Create / Edits Agents**, in order to create following 4 Agents, by filling out the fields accordingly (use the openai option for LLM): 
 
 
 | Name | Customer Analyst |
@@ -157,7 +157,7 @@ Take a moment to select each agent tile on the left hand side, and review the ag
 
 - For each of the agents, created in lab 2, select each agent one by one and add the relevant tool.
 
-For the Agents **Customer Analyst, Transactions Analyst and Product Recommender** select the tool **hol db tool** out of the tool template and click **Create tool from Template.
+For the Agents **Customer Analyst, Transactions Analyst and Product Recommender** select the tool **hol db tool** out of the tool template and click **Create tool from Template**.
 
 For the Agent **Competitive Insights** select the tool **hol web scraper**
 
