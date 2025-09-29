@@ -100,24 +100,16 @@ However we are going to build a complete workflow from scratch (sorry about this
 To do so, in the Agentic workflow tab:
 - click on the button **Create**
 - You are then asked to give a workflow name, so enter: "<your user name> Intelli Banking" and then click **Create Workflow** at the right bottom of the screen
--  
+- Set Conversational: ON
+- Set Manager Agent: ON
+
+<br/>
+<img src="images/workflowstart.png" width="70%">
+ 
+ <br/>
 
 
-- Create 4 Agents
-
-
-Create > Intelli Banking Workflow: 
-
-Configure: 
-
-Is Conversational: ON
-
-Manager Agent: ON
-
-Default Manager.
-
-
-Create following 4 Agents: 
+ - Click on ** Create / Edits Agents, in order to create following 4 Agents, by filling out the fields accordingly (use the openai option for LLM): 
 
 
 | Name | Customer Analyst |
@@ -133,7 +125,7 @@ Create following 4 Agents:
 | Backstory | Specializes in behavioral analytics to support targeting for marketing and engagement. |
 | Goal | Detect customer behavioral patterns using transaction_data to surface high-potential leads or risk indicators. |
 
-| Name | Transactions Analyst |
+| Name | Product Recommender |
 | ----------- | ----------- |
 | Role | Personalized Product Recommendation Engine |
 | Backstory | Product expert helping align offerings with usage trends and customer potential. |
@@ -146,288 +138,54 @@ Create following 4 Agents:
 | Goal | Scrape live web content to identify loans, credit offers offers, compare with internal product catalog, and propose competitive positioning. |
 
 
-**IMPORTANT!**
-In the Configure Project screen, change the HIVE_TABLE to have a unique suffix. Leave the other environment variables as is.
-
-
-| variable | value |
-| ----------- | ----------- |
-| DATA_LOCATION | my-data/churn_prototype |
-| HIVE_DATABASE | default |
-| HIVE_TABLE | churn_protype_YOUR UNIQUE VALUE |
- 
-<br/>
-<img src="images/projectstart.png" width="70%">
+ <br/>
+<img src="images/createagents.png" width="70%">
  
  <br/>
-- Click **Launch Project**
 
- <br/><br/> 
+When you finished and saved the created agents, your screen should look like this:
 
-## Lab 2: Data Loading and interactive Analysis (20 min)
+ <br/>
+<img src="images/agentsresult.png" width="70%">
+ 
+ <br/>
 
-#### Data Loading
+Take a moment to select each agent tile on the left hand side, and review the agent settings on the right hand. So we define an agents behaviour by means of natural language that are leveraged as prompts when calling the LLM
 
-Sessions allow you to perform actions such as run R, Scala or Python code. They also provide access to an interactive command prompt and terminal. Sessions will be built on a specified Runtime Image, which is a docker container that is deployed onto the ML Workspace. In addition you can specify how much compute you want the session to use.
 
-- Click on *Overview* in the side panel
-- Click *New Session* in the top right corner
-<br/>
-<img src="images/startnewsession1.png" width="70%">
-<br/>
+## Lab 3: Add Tools to all four agents
 
+- For each of the agents, created in lab 2, select each agent one by one and add the relevant tool.
 
-Before you start a new session you can give it a name, choose an editor (e.g. JupyterLab), what kernel you’d like to use (e.g. latest Python or R), whether you want to make Spark (and hdfs) libraries be available in your session, and finally the resource profile (CPU, memory, and GPU).
-- Ensure that Spark is enabled
-- Leave all other settings as is and click *start session*
-<br/>
-The Workbench is now starting up and deploying a container onto the workspace at this point. Going from left to right you will see the project files, editor pane, and session pane.
+For the Agents **Customer Analyst, Transactions Analyst and Product Recommender** select the tool **hol db tool** out of the tool template and click **Create tool from Template.
 
-Once you see the flashing red line on the bottom of the session pane turn steady green the container has been successfully started.
+For the Agent **Competitive Insights** select the tool **hol web scraper**
 
-You will be greeted with a pop-up window to get you started connecting to pre-populated Data Lake sources (e.g. virtual Data Warehouses). You could simply copy the code snippet provided and easily connect to, say, a Hive vDW. However, in this lab we won’t be using this feature.
+ <br/>
+<img src="images/selecttool.png" width="70%">
+ 
+ <br/>
 
-**Script 1: Ingest Data**
 
-- Navigate to code/1_data_ingest.py
+## Lab 4 configure Workflow and test draft workflow
 
-In this script you will ingest a raw csv file into a Spark Dataframe. The script has a .py extension and therefore is ideally suited for execution with the Workbench editor. No modifications to the code are required and it can be executed as is.
+ <br/>
+<img src="images/configinput.png" width="70%">
+ <br/>
 
-You can execute the entire script in bulk by clicking on the “play icon” on the top menu bar. Once you do this you should notice the editor bar switches from green to red.
-As an alternative you can select subsets of the code and execute those only. This is great for troubleshooting and testing. To do so, highlight a number of lines of code from your script and then click on “Run” -> “Run Lines” from the top menu bar.
+## Lab 5  Deploy Workflow 
 
-**Important! Run All lines in this script**
 
-<br/>
-<img src="images/codesel1.png" width="70%">
-<br/>
 
+## Lab 6 leverage MCP server instead of hol db tool
+ 
 
-The code is explained in the script comments. However, here are a key few highlights:
 
-- Because Cloudera AI is integrated with SDX and CDP, you can easily retrieve large datasets from Cloud Storage (ADLS, S3, Ozone) with a simple line of code
-- Apache Spark is a general purpose framework for distributed computing that offers high performance for both batch and stream processing. It exposes APIs for Java, Python, R, and Scala, as well as an interactive shell for you to run jobs.
-- In Cloudera Machine Learning (Cloudera AI), Spark and its dependencies are bundled directly into the Cloudera AI runtime Docker image.
-Furthermore, you can switch between different Spark versions at Session launch.
 
+----------------------------------------- THE END ----------------------
 
-In a real-life scenario, the underlying data may be shifting from week to week or even hour to hour. It may be necessary to run the ingestion process in Cloudera AI on a recurring basis. Jobs allow any project script to be scheduled to run inside of an ML Workspace compute cluster.
 
-- Click on  *Project* in the top panel
-- Click on  *Jobs* in the side panel
-- Click *New Job*
-- Give your job a name (e.g. Ingestion Job) and select code/1_data_ingest.py as the Script to run
-- Toggle *Enable Spark*
-- Select Recurring as the Schedule from the dropdown and provide daily time for the job to run
 
-<br/>
-<img src="images/job1.png" width="70%">
-<br/>
-
-- Scroll to the bottom of the page and click *Create Job*
-
-<br/>
-<img src="images/job12.png" width="70%">
-<br/>
-
-Optionally, you can also manually trigger your job by clicking the *Run*   action button on the right.
-With Jobs you can schedule and orchestrate your batch scripts. Jobs allow you to build complex pipelines and are an essential part of any CI/CD or ML Ops pipeline. Typical use cases span from Spark ETL, Model Batch Scoring, A/B Testing and other model management related automations.
-
-- Click on *Sessions*  in the side panel and on the *Session Name* to return to your running session
-
-<br/>
-<img src="images/runses1.png" width="70%">
-<br/>
-
-
-#### Interactive Analysis with JupyterLab
-
-In the previous section you loaded a csv file with a python script. In this section you will perform more Python commands with Jupyter Notebooks. Notebooks have a “.ipynb” extension and need to be executed with a Session using the JupyterLabs editor.
-
-Launch a new session by selecting *New Session* in the menu bar in the top right side of the screen. If you are in full-screen mode, the *Sessions*  dropdown will appear without having to click into the menu.
-
-<br/>
-<img src="images/newsessionmenu.png" width="40%">
-<br/>
-
-Launch the new Session with the following settings:
-
-- Session Name: telco_churn_session_2
-- **Important!** Editor: *JupyterLab*
-- Kernel: Python 3.9
-- Resource Profile: 1vCPU/2 GiB Memory
-- Runtime Edition: Standard
-- Runtime Version: Any available version
-- Enable Spark Add On: enable any Spark version *Enable Spark*
-
-<br/>
-<img src="images/labsession.png" width="70%">
-<br/>
-
-After a few moments the JupyterLab editor should have taken over the screen.
-
-Open Notebook *code/2_data_exploration.ipynb* from the left side menu and investigate the code.
-
-Notebook cells are meant to be executed individually and give a more interactive flavor for coding and experimentation.
-
-As before, no code changes are required and more detailed instructions are included in the comments. There are two ways to run each cell. Click on the cell you want to run. Hit “Shift” + “Enter” on your keyboard. Use this approach if you want to execute each cell individually. If you use this approach, make sure to run cells top to bottom, as they depend on each other.
-
-Alternatively, open the “Run” menu from the top bar and then select “Run All”. Use this approach if you want to execute the entire notebook in bulk.
-
-<br/>
-<img src="images/juprunall1.png" width="70%">
-<br/>
-
-With Cloudera AI Runtimes, you can easily switch between different editors and work with multiple editors or programming environments in parallel if needed.  First you stored a Spark Dataframe as a Spark table in the “1_ingest_data.py” python script using the Workbench editor. Then you retrieved the data in notebook “2_data_exploration.ipynb” using a JupyterLab session via Spark SQL. Spark SQL allows you to easily exchange files across sessions. Your Spark table was tracked as Hive External Tables and automatically made available in Atlas, the Data Catalog, and CDW. This is powered by SDX integration and requires no work on the CDP Admin or Users. We will see more on this in Part 7.
-
-## Lab 3: Model Training and mlflow experiments (20 min)
-
-When you are finished with notebook “2_data_exploration.ipynb” go ahead and move on to notebook “3_model_building.ipynb”. As before, no code changes are required.
-
-- While still in JupyterLab session,
-- navigate to code/3_model_building.ipynb
-- Execute all code in 3_model_building.ipynb
-
-In this notebook “3_model_building.ipynb” you create a model with SciKit Learn and Lime, and then store it in your project. Optionally, you could have saved it to Cloud Storage. Cloudera AI allows you to work with any other libraries of your choice. This is the power of Cloudera AI… any open source library and framework is one pip install away.
-
-- Click *Stop* to terminate your JupyterLab session
-- Return to *<- Project*  and *Sessions*   and to your single running session
-
-#### Model training and mlflow Experiments
-
-After exploring the data and building an initial, baseline model the work of optimization (a.k.a. hyperparameter tuning) can start to take place. In this phase of an ML project, model training script is made to be more robust. Further, it is now time to find model parameters that provide the “best” outcome. Depending on the model type and business use case “best” may mean use of different metrics. For instance, in a model that is built to diagnose ailments, the rate of false negatives may be especially important to determine “best” model. In cybersecurity use case, it may be the rate of false positives that’s of most interest.
-
-To give Data Scientists flexibility to collect, record, and compare experiment runs, Cloudera AI provides out-of-the-box mlflow Experiments as a framework to achieve this.
-
-- Inside a running Workbench session,
-- navigate to code/4_train_model.py
-- Click the *play button* in the top menu
-
-This script uses “kernel” and “max_iter” as the two parameters to manipulate during model training in order to achieve the best result. In our case, we’ll define “best” as the highest “test_score”.
-
-- While your script is running,
-- click on *<- Project* in the top panel
-- Click on *Experiments*  in the side bar
-- Click on Churn Model Tuning
-
-<br/>
-<img src="images/explist1.png" width="90%">
-<br/>
-
-As expected, higher number of max_iterations produces better result (higher test_score). Interestingly, the choice of kernel does not make a difference at higher max_iter values. We can choose linear as it allows for faster model training.
-
-- Select all runs with “linear” Kernel
-- Click *Compare*
-- Click the metric *test_score*
-
-<br/>
-<img src="images/expcomp1.png" width="90%">
-<br/>
-
-
-Built-in visualizations in mlflow allow for more detailed comparison of various experiment runs and outcomes.
-
-
-## Lab 4: Model Deployment (20 min)
-
-Once a model is trained its predictions and insights must be put to use so they can add value to the organization. Generally this means using the model on new, unseen data in a production environment that offers key ML Ops capabilities.
-
-One such example is Batch Scoring via Cloudera AI Jobs. The model is loaded in a script and the predict function provided by the ML framework is applied to data in batch. The script is scheduled and orchestrated to perform the scoring on a regular basis. In case of failures, the script or data are manually updated so the scoring can resume.
-
-This pattern is simple and reliable but has one pitfall. It requires the user or system waiting for the scoring job to run at its scheduled time. What if predictions are required on a short notice? Perhaps when a prospect navigates on an online shopping website or a potential anomaly is flagged by a third party business system?
-
-- Cloudera AI Models allow you to deploy the same model script and model file in a REST Endpoint so the model can now serve responses in real time. The endpoint is hosted by a container.
-- Cloudera AI Models provides tracking, metadata and versioning features that allow you to manage models in production.
-- Similarly, Cloudera AI Applications allows you to deploy visual tools in an endpoint container. This is typically used to host apps with open source libraries such as Flask, Shiny, Streamlit and more.
-- Once a model is deployed to a Cloudera AI Models container, a Cloudera AI Application can forward requests to the Model endpoint to provide visual insights powered by ML models.
-
-#### Lets Deploy a scoring model
-
-Below are the steps to deploy a near-real-time scoring model:
-
-- Click on *Models*  in the side panel
-- Click *New Model*
-- **Important!** Name your model *Churn Model API Endpoint* .
-Any other name will cause issues with downstream scripts.
-- **Important!** Uncheck *Enable Authentication*
-- Under File select *code/5_model_serve_explainer.py*
-- Under Function enter *explain*
-- For Example Input enter the following JSON
-- Make sure the editor type is workbench!
-- You do not need to Enable Spark for model serving in this case
-
-This JSON is a set of key value pairs representing a customer’s attributes. For example, a customer who is currently on a DSL Internet Service plan.
-
-```
-{
-  "StreamingTV": "No",
-  "MonthlyCharges": 70.35,
-  "PhoneService": "No",
-  "PaperlessBilling": "No",
-  "Partner": "No",
-  "OnlineBackup": "No",
-  "gender": "Female",
-  "Contract": "Month-to-month",
-  "TotalCharges": 1397.475,
-  "StreamingMovies": "No",
-  "DeviceProtection": "No",
-  "PaymentMethod": "Bank transfer (automatic)",
-  "tenure": 29,
-  "Dependents": "No",
-  "OnlineSecurity": "No",
-  "MultipleLines": "No",
-  "InternetService": "DSL",
-  "SeniorCitizen": "No",
-  "TechSupport": "No"
-}
-```
-
-<br/>
-<img src="images/depmodel1.png" width="70%">
-<br/>
-
-- Scroll to the bottom of the page and click *Deploy Model*
-
-
-Model deployment may take a minute or two, meanwhile you can click on the Model name and explore the UI. The code for a sample request is provided on the left side. On the right side observe the model’s metadata. Each model is assigned a number of attributes including Model Name, Deployment, Build and creation timestamp.
-
-
-- Note down the *Build Id* of your model, we will need it in MLOps part of the workshops
-
-<br/>
-<img src="images/modelui1.png" width="100%">
-<br/>
-
-
-- Once your model is Deployed, click *Test*
-
-The test simulates a request submission to the Model endpoint. The model processes the input and returns the output along with metadata and a prediction for the customer. In addition, the request is assigned a unique identifier. We will use this metadata for ML Ops later in part 6.  
-
-
-#### Optional Exercise: Lets simulate some real-world model performance for later purposes
-
-Before moving on to the next section, we will kick off a script to simulate real-world model performance.
-
-- Return to a running session () or start a new session if none are running
-- Navigate to code/7a_ml_ops_simulation.py
-- Run the entire script by clicking  in the top menu
-
-This will generate a 1000 calls to the model, while we explore other parts of Cloudera AI. **Do not** wait for this script to finish. Proceed to the next part of the workshop.
-
-#### Lets look into what we just deployed
-
-Navigate back to the Project Overview page and open the *“5_model_serve_explainer.py”* script. Scroll down and familiarize yourself with the code.
-
-- Notice the method “explain” method. This is the Python function whose purpose is to receive the Json input as a request and return a Json output as a response.
-Within the method, the classifier object is used to apply the model object’s predict method.
-- In addition, notice that a decorator named “@cdsw.model_metrics” is applied to the “explain” method. Thanks to the decorator you can use the “cdsw.track_metric” methods inside the “explain” method to register each scalar value associated with each request.
-- The values are saved in the Model Metrics Store, a built in database used for tracking model requests.
-
-Navigate back to the Project Overview page. Open the “models/telco_linear” subfolder and notice the presence of the “telco_linear.pkl” file. This is the physical model file loaded by the .py script you just inspected above.
-
-<br/>
-<img src="images/modelserveexplain1.png" width="100%">
-<br/>
 
 
 
