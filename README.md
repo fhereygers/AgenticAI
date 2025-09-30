@@ -109,7 +109,7 @@ To do so, in the Agentic workflow tab:
  <br/>
 
 
- - Click on **Create / Edits Agents**, in order to create following 4 Agents, by filling out the fields accordingly (use the openai option for LLM): 
+ - Click on **Create / Edits Agents**, in order to create following 4 Agents, by filling out the fields accordingly for each single agent and by clicking **create Agent** at the lower right of the screen (use the openai option for LLM): 
 
 
 | Name | Customer Analyst |
@@ -134,40 +134,75 @@ To do so, in the Agentic workflow tab:
 | Name | Competitive Insights |
 | ----------- | ----------- |
 | Role | External Market Intelligence Agent |
-| Backstory | SCompetitive intelligence agent scraping the latest banking promotions. |
+| Backstory | Competitive intelligence agent scraping the latest banking promotions. |
 | Goal | Scrape live web content to identify loans, credit offers offers, compare with internal product catalog, and propose competitive positioning. |
 
 
+When you finished entering the above fields and saved the created agents, your screen should look like this:
+
  <br/>
-<img src="images/createagents.png" width="70%">
+<img src="images/createagents.png" width="80%">
  
  <br/>
 
-When you finished and saved the created agents, your screen should look like this:
+Take a moment to select each agent tile on the left hand side, and review the agent settings on the right hand. So we define an agents behaviour by means of natural language that are leveraged as prompts when calling the LLM.
+
+- When you finished reviewing click **close** at the bottom right, to get to the workflow page page again.
+
+At the top of the screen you see that we are in the **Add Agents**step and you see also the next steps. 
+On the right you see a graph that links the agents with a default manager.
+
+In the next lab we are going to add tools to the 4 agents, so they can do actions.
 
  <br/>
-<img src="images/agentsresult.png" width="70%">
+<img src="images/agentsresult.png" width="80%">
  
  <br/>
-
-Take a moment to select each agent tile on the left hand side, and review the agent settings on the right hand. So we define an agents behaviour by means of natural language that are leveraged as prompts when calling the LLM
 
 
 ## Lab 3: Add Tools to all four agents
 
-- For each of the agents, created in lab 2, select each agent one by one and add the relevant tool.
+- Click on the **Create or Edit Agents** button again.
+- For each of the agents, created in lab 2, select each agent one by one and add the relevant tool by clicking the **Create or Edit Tools** button
 
-For the Agents **Customer Analyst, Transactions Analyst and Product Recommender** select the tool **hol db tool** out of the tool template and click **Create tool from Template**.
+For the Agents **Customer Analyst, Transactions Analyst and Product Recommender**:
 
-For the Agent **Competitive Insights** select the tool **hol web scraper**
+- select the tool **hol db tool** out of the tool template 
+- click **Create tool from Template**.
+- click **Save tool** and then **close**
+
+For the Agent **Competitive Insights**:
+
+- select the tool **hol web scraper** out of the tool template 
+- click **Create tool from Template**.
+- click **Save tool** and then **close**
+
+
+
+**Tip: you can limit the selection of tool templates by entering **hol** in the search template mask**
 
  <br/>
-<img src="images/selecttool.png" width="70%">
+<img src="images/selecttool.png" width="80%">
  
  <br/>
 
+- Click **close** to get to the "Edit Workflow" page.
+
+Now the graph on the right hand side should contain also the right tools for each agent. 
+
+We are finished with the **Add Agents** step. 
+
+<br/>
+<img src="images/workflowwithtools.png" width="80%">
+<br/>
 
 ## Lab 4 configure Workflow and test draft workflow
+
+- Click on the **Save & Next** button to get in the next step "Add tasks". As it is a converstional workflow no additional setting is required.
+- Click again on the **Save & Next** button to get to the "configure" step.
+- Enter your the required parameters for all tools, the below image should give you hints on the values. Otherwise check the chat for information.
+- Click the **Save & Next** button to get to the "Test" step.
+  
 
  <br/>
 <img src="images/configinput.png" width="70%">
