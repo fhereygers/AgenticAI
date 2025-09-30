@@ -74,12 +74,12 @@ A Workspace is a cluster that runs on a kubernetes service to provide teams of d
  <br/>
 
 - Click on AI Studios > Agent Studio in the left menu
+- then click **get started** to get to the home screen of Agent Studio
 
 <br/>
 <img src="images/agenticaihome.png" width="70%">
  <br/>
 
-blah blah
 
 ## Lab 2: Start creating workflow with agents
 
@@ -92,14 +92,14 @@ By default you are in the Agentic Workflow tab, and below you find an overview o
 Workflow templates allow you to create a new workflow based upon a template. This is a sort of quick start or samples to give ideas on how to typically build workflows.
 
 <br/>
-<img src="images/agentstudiohome.png" width="70%">
+<img src="images/agentstudiohome.png" width="80%">
  <br/>
 
 However we are going to build a complete workflow from scratch (sorry about this :-))
 
 To do so, in the Agentic workflow tab:
 - click on the button **Create**
-- You are then asked to give a workflow name, so enter: "<your user name> Intelli Banking" and then click **Create Workflow** at the right bottom of the screen
+- You are then asked to give a workflow name, so enter: **" 'your user name' Intelli Banking"** and then click **Create Workflow** at the right bottom of the screen
 - Set Conversational: ON
 - Set Manager Agent: ON
 
