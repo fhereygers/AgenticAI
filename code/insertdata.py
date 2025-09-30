@@ -1,10 +1,31 @@
+import os
+import xml.etree.ElementTree as ET
+
 from pyspark.sql import SparkSession
 from pyspark.sql.utils import AnalysisException
 from pyspark.sql.types import *
 
 
-STORAGE = "s3a://goes-se-sandbox/data/onlinebankingfh"
-hive_database= "onlinebankingfh"
+if os.path.exists("/etc/hadoop/conf/hive-site.xml"):
+        tree = ET.parse("/etc/hadoop/conf/hive-site.xml")
+        root = tree.getroot()
+        for prop in root.findall("property"):
+            if prop.find("name").text == "hive.metastore.warehouse.dir":
+                # catch erroneous pvc external storage locale
+                if len(prop.find("value").text.split("/")) > 5:
+                    STORAGE = (
+                        prop.find("value").text.split("/")[0]
+                        + "//"
+                        + prop.find("value").text.split("/")[2]
+                    )
+
+
+hive_database= "onlinebanking"
+
+STORAGE = STORAGE + "/data/" + hive_database
+
+print(STORAGE)
+
 
 !hdfs dfs -mkdir {STORAGE}
 
@@ -74,19 +95,8 @@ cust_data.write.format("parquet").mode("overwrite").saveAsTable(hive_table)
 
 
 
-spark.sql("show databases").show()
+# spark.sql("show databases").show()
 
-spark.sql("create database onlinebankingfh").show()
-
-spark.sql("drop database onlinebankingfh").show()
-
-spark.sql("create database "+ hive_database).show()
-
-spark.sql("show tables in " + hive_database).show()
-
-spark.sql("select * from " + hive_table).show()
-
-spark.sql("select count(*) from " + hive_table).show()
 
 
 # 
