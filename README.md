@@ -36,7 +36,7 @@ By following the exercises, you will understand how with cloudera AI you can aut
 
 #### Login into the CDP tenant
 
-Welcome to the virtual hands on Lab of October 29. 2025. You all have been assigned a unique user name.
+Welcome to the virtual hands on Lab of October 9th. 2025. You all have been assigned a unique user name.
 
 Search for your first name and the initial of your last name and memorize the assigned user name.
 
@@ -70,14 +70,14 @@ A Workspace is a cluster that runs on a kubernetes service to provide teams of d
 - Click on the publicly available project named **AgenticAI**.
 
 <br/>
-<img src="images/pubproj.png" width="70%">
+<img src="images/pubproj.png" width="90%">
  <br/>
 
 - Click on AI Studios > Agent Studio in the left menu
 - then click **get started** to get to the home screen of Agent Studio
 
 <br/>
-<img src="images/agenticaihome.png" width="70%">
+<img src="images/agenticaihome.png" width="90%">
  <br/>
 
 
@@ -92,7 +92,7 @@ By default you are in the Agentic Workflow tab, and below you find an overview o
 Workflow templates allow you to create a new workflow based upon a template. This is a sort of quick start or samples to give ideas on how to typically build workflows.
 
 <br/>
-<img src="images/agentstudiohome.png" width="80%">
+<img src="images/agentstudiohome.png" width="90%">
  <br/>
 
 However we are going to build a complete workflow from scratch (sorry about this :-))
@@ -104,7 +104,7 @@ To do so, in the Agentic workflow tab:
 - Set Manager Agent: ON
 
 <br/>
-<img src="images/workflowstart.png" width="70%">
+<img src="images/workflowstart2.png" width="90%">
  
  <br/>
 
@@ -141,7 +141,7 @@ To do so, in the Agentic workflow tab:
 When you finished entering the above fields and saved the created agents, your screen should look like this:
 
  <br/>
-<img src="images/createagents.png" width="80%">
+<img src="images/createagents.png" width="90%">
  
  <br/>
 
@@ -155,7 +155,7 @@ On the right you see a graph that links the agents with a default manager.
 In the next lab we are going to add tools to the 4 agents, so they can do actions.
 
  <br/>
-<img src="images/agentsresult.png" width="80%">
+<img src="images/agentsresult.png" width="90%">
  
  <br/>
 
@@ -186,9 +186,18 @@ For the Agent **Competitive Insights**:
  
  <br/>
 
+When finished, you can once again click through the agents again and verify all agents got the right tool assigned.
+
+<br/>
+<img src="images/agentwithtool.png" width="80%">
+ 
+ <br/>
+
 - Click **close** to get to the "Edit Workflow" page.
 
 Now the graph on the right hand side should contain also the right tools for each agent. 
+
+ 
 
 We are finished with the **Add Agents** step. 
 
@@ -205,7 +214,7 @@ We are finished with the **Add Agents** step.
   
 
  <br/>
-<img src="images/configinput.png" width="70%">
+<img src="images/configinput2.png" width="70%">
  <br/>
 
  Test the workflow with following test questions:
