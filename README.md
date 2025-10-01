@@ -217,6 +217,11 @@ We are finished with the **Add Agents** step.
  - Who are the top spenders in the last 30 days?
  - Who are the top 3 credit card customers based on their total spending?
 
+Take some time and browse through the playback / logs and monitoring to understand how the agents cooperate together to get to the right answers.
+
+<br/>
+<img src="images/playback.png" width="70%">
+ <br/>
 
 
 ## Lab 5  Deploy Workflow 
