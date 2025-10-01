@@ -197,7 +197,7 @@ Now the graph on the right hand side should contain also the right tools for eac
 We are finished with the **Add Agents** step. 
 
 <br/>
-<img src="images/workflowwithtools.png" width="80%">
+<img src="images/workflowwithtools.png" width="90%">
 <br/>
 
 ## Lab 4 configure Workflow and test draft workflow
