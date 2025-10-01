@@ -13,14 +13,9 @@ The project is organized with the following folder structure:
 ```
 .
 ├── code/              # Backend scripts, and notebooks needed to create project artifacts
-├── flask/             # Assets needed to support the front end application
+├── data/              # data that needs to be loaded into the warehouse
 ├── images/            # A collection of images referenced in project docs
-├── models/            # Directory to hold trained models
-├── raw/               # The raw data file used within the project
-├── cdsw-build.sh      # Shell script used to build environment for experiments and models
-├── model_metrics.db   # SQL lite database used to store model drift metrics
-├── README.md
-└── requirements.txt
+├── tools /            # python tools that need be loaded into the tool template
 ```
 
 By following the exercises, you will understand how with cloudera AI you can author and deploy your own agentic workflows:
@@ -87,7 +82,7 @@ Take a moment to get familiar with the Agent Studio application.
 
 In the top right corner you see four tabs: Agentic Workflow, Tools Catalog , LLMs and Feedback.
 
-By default you are in the Agentic Workflow tab, and below you find an overview of deployed workflows (if any), Draft workflows (if any any) and workflow templates.
+By default you are in the Agentic Workflow tab, and below you find an overview of deployed workflows (if any), Draft workflows (if any) and workflow templates.
 
 Workflow templates allow you to create a new workflow based upon a template. This is a sort of quick start or samples to give ideas on how to typically build workflows.
 
@@ -109,7 +104,7 @@ To do so, in the Agentic workflow tab:
  <br/>
 
 
- - Click on **Create / Edits Agents**, in order to create following 4 Agents, by filling out the fields accordingly for each single agent and by clicking **create Agent** at the lower right of the screen (use the openai option for LLM): 
+ - Click on the  **Create or Edits Agents** button, in order to create following 4 Agents, by filling out the fields accordingly for each single agent and by clicking **create Agent** at the lower right of the screen (use the openai option for LLM): 
 
 
 | Name | Customer Analyst |
@@ -149,7 +144,7 @@ Take a moment to select each agent tile on the left hand side, and review the ag
 
 - When you finished reviewing click **close** at the bottom right, to get to the workflow page page again.
 
-At the top of the screen you see that we are in the **Add Agents**step and you see also the next steps. 
+At the top of the screen you see that we are in the **Add Agents** step and you see also the next steps. 
 On the right you see a graph that links the agents with a default manager.
 
 In the next lab we are going to add tools to the 4 agents, so they can do actions.
