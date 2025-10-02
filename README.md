@@ -190,14 +190,14 @@ For the Agent **Competitive Insights**:
 **Tip: you can limit the selection of tool templates by entering **hol** in the search template mask**
 
  <br/>
-<img src="images/selecttool.png" width="80%">
+<img src="images/selecttool.png" width="90%">
  
  <br/>
 
 When finished, you can once again click through the agents again and verify all agents got the right tool assigned.
 
 <br/>
-<img src="images/agentwithtool.png" width="80%">
+<img src="images/agentwithtool.png" width="90%">
  
  <br/>
 
@@ -222,7 +222,7 @@ We are finished with the **Add Agents** step.
   
 
  <br/>
-<img src="images/configinput2.png" width="70%">
+<img src="images/configinput2.png" width="90%">
  <br/>
 
  Test the workflow with following test questions:
