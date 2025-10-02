@@ -223,6 +223,11 @@ Take some time and browse through the playback / logs and monitoring to understa
 <img src="images/playback.png" width="70%">
  <br/>
 
+We use Phoenix to instrument our workflows for observability. Phoenix is an open-source AI observability platform designed for experimentation, evaluation, and troubleshooting.
+Click on Monitoring to leverage Phoenix e.g. for troubleshooting
+
+
+
 
 ## Lab 5  Deploy Workflow 
 
@@ -256,206 +261,9 @@ and then ask following questions:
 
 
 
-## Lab 5: Interacting with the visual application (10 min)
 
 
-You have already seen that Cloudera Data Visualization is deployed in Cloudera AI as an Application. In fact, any custom, UI app can be hosted within Cloudera AI. These can be streamlit, Django, or Rshiny (or other frameworks) apps that deliver custom visualization or incorporate a real-time model scoring.
 
-In the following steps we will deploy an Application for the Churn Customer project:
 
-- Go to *Models* and click on the model that you’ve deployed
-- Go to the *Settings* tab and copy the *Access Key* string
-
-<br/>
-<img src="images/modelkey1.png" width="70%">
-<br/>
-
-- Navigate to *Files > flask > single_view.html*
-- Click on *Open in Session* to get the file in edit mode (No Need to start the actual session)
-- **Important!** On line 61 of the file, update the access key value with the Access Key you got earlier.
-- Click *File > Save (or ⌘+S)*
-- Click on *Apllications*  in the side panel
-- Click on *New Application*
-- Give your application a name, and provide a **unique** subdomain
-- Under *Scripts* select *code/6_application.py*
-- Ensure that a *Workbench* editor is selected
-- and *Enable Spark* toggle is turned on
-
-<br/>
-<img src="images/crapp1.png" width="70%">
-<br/>
-
-- Scroll the bottom of the page and click *Create Application*  
-
-Application startup can take up to 2 minutes, and once the application is ready you’ll see a card similar to this:
-
-<br/>
-<img src="images/apprunning1.png" width="40%">
-<br/>
-
-
-Click on the application in order to open it. This will automatically redirect you to the Visual Application landing page where the same data you worked with earlier is presented in an interactive table.
-
-On the left side notice the probability column. This is the target variable predicted by the Machine Learning Model. It reflects the probability of each customer churning. The value is between 0 and 1. A value of 0.49 represents a 49% probability of the customer churning. By default, if the probability is higher than 50% the classifier will label the customer as “will churn” and otherwise as “will not churn”.
-
-The 50% threshold can be increased or decreased implying customers previously assigned a “will churn” label may flip to “will not churn” and vice versa. This has important implications as it provides an avenue for tuning the level selectivity based on business considerations but a detailed explanation is beyond the scope of this content.
-
-- Next, click on the customer at the top of the table to investigate further.
-
-![apppage1](images/apppage1.png)
-
-A more detailed view of the customer is automatically loaded. The customer has a 58% chance of churning.
-
-The Lime model applied to the classifier provides a color coding scheme highlighting the most impactful features in the prediction label being applied to this specific customer.
-
-For example, this customer’s prediction of “will churn” is more significantly influenced by the “Internet Service” feature.
-- The dark red color coding signals that the customer is negatively impacted by the current value for the feature.
-- The current values of Monthly Charges and Phone Service also increase the likelihood of churn while the values of the Streaming Movies and Total Charges features decrease the likelihood of churn.
-
-![apppage1](images/apppage1.png)
-
-Let’s see what happens if we change the value for the most impactful feature in this given scenario i.e. “Internet Service”. Currently the value is set to “Fiber Optic”.
-
-- Hover over the entry in the table and select “DSL”.
-
-![apppage2](images/apppage2.png)
-
-
-The table has now reloaded and the churn probability for this customer has dramatically decreased to roughly 15%.
-
-This simple analysis can help the marketer optimise strategy in accordance to different business objectives. For example, the company could now tailor a proactive marketing offer based on this precious information. In addition, a more thorough financial analysis could be tied to the above simulation perhaps after adjusting the 50% threshold to increase or decrease selectivity based on business constraints or customer lifetime value assigned to each customer.  
-
-
-#### Script 6: Exploring the Application Script
-
-- Navigate back to the Cloudera AI Project Home folder.
-- Open the “Code” folder and then script “6_application.py”.
-
-This is a basic Flask application that serves the HTML and some specific data used for.
-
-- Click on “Open in Workbench” to visualize the code in a more reader friendly-mode.
-
-![apppage3](images/apppage3.png)
-
-
-Now you will be able to explore the code with the Workbench Editor. The “Launch Session” form will automatically load on the right side of your screen. There is no need to launch a session so you can just minimize it.
-
-As always no code changes are required. Here are some key highlights:
-
-- At lines 177 - 191 we load the model and use the “Explain” method to load a small dataset in the file. This is similar to what you did in script 5. If you want to display more data or fast changing data there are other ways to do this, for example with Cloudera SQL Stream Builder.  
-- At line 248 we run the app on the "CDSW_APP_PORT". This value is already preset for you as this is a default environment variable. You can reuse this port for other applications.
-
-
-## Optional Lab 6: Cloudera AI Model Operations (15 min)
-
-The following steps assume you have executed the* 7a_ml_ops_simulation.py* script as shown in Lab 4. If you haven’t done it please go back and make sure to run the model simulation script.
-
-- Navigate back to the project overview and launch a new session with the following configurations.
-
-  - **Session Name: telco_churn_ops_session**
-  - **Editor: Workbench**
-  - **Kernel: Python 3.9**
-  - **Resource Profile: 1vCPU/2 GiB Memory**
-  - **Runtime Edition: Standard**
-  - **Runtime Version: Any available version**
-  - **Enable Spark Add On: any Spark version**
-
-- Once the session is running, open script *7b_ml_ops_visual.py* and explore the code in the editor.
-- Execute the whole script end to end without modifications.
-
-Observe the code outputs on the right side. Here are the key highlights:
-
-- Model predictions are tracked in the Cloudera AI Models Metrics Store. This is enabled by the use of the Python decorator and the use of “cdsw.track_metrics” methods in script 5. What is being tracked is completely up to the script developer.
-- You can then extract the predictions and related metadata and put the information in a Pandas dataframe. Again, the Python library you use does not matter and is entirely up to the developer.
-- This is exactly what the first diagram on the right side of your screen shows. Each column represents a prediction request reaching your Cloudera AI Model endpoint. Each row represents a metric you are tracking in the Cloudera AI Models Metrics Store.
-
-![mlops1](images/mlops1.png)
-
-- Once the tracked metrics have been saved to a Python data structure they can be used for all sorts of purposes.
-- For example, the second diagram shows a basic line plot in Seaborn where the models’ output probabilities are plotted as a function of time. On the X axis you can see the timestamp associated with each request. On the Y axis you can find the associated output probability.
-
-![mlops2](images/mlops2.png)
-
-- Similarly, you can plot processing time as shown in the third diagram. This represents the time duration required to process a particular request.
-As an example, this information could be used to trigger the deployment of more resources to support this model endpoint when a particular threshold is passed. -  You can deploy more resources manually via the UI, or programmatically and in an automated CI/CD pipeline with Cloudera AI APIv2 and Cloudera AI Jobs.
-
-![mlops3](images/mlops3.png)
-
-- You can also monitor the model’s accuracy over time. For example, the below diagram shows a line plot of prediction accuracy sorted over time. As you can see, the trend is negative and the model is making increasingly less accurate predictions.
-- Just like with processing time and other metrics, Cloudera AI allows you to implement ML Ops pipelines that automate actions related to model management. For example, you could use a combination of Cloudera AI Jobs and Cloudera AI APIv2 to trigger the retraining and redeployment of a model when its accuracy reaches a particular threshold over a particular time period.
-- As always this is a relatively basic example. Cloudera AI is an open platform for hands-on developers which gives users the freedom to implement more complex ML Ops pipelines.
-
-![mlops4](images/mlops4.png)
-
-- Ground truth metrics can be collected with the cdsw.track_delayed_metrics method. This allows you to compare your predictions with the actual event after the prediction was output. In turn, this allows you to calculate the model accuracy and create visualizations such as the one above.
-- For an example of the cdsw.track_delayed_metrics method open the “7a_ml_ops_simulation.py” script and review lines 249 - 269. Keep in mind that this is just a simulation.
-- In a real world scenario the requests would be coming from an external system or be logged in a SQL or NoSQL database. In turn, the script above would be used to set  ground truth values in batch via a Cloudera AI Job or in real time with a Cloudera AI Model endpoint.
-
-
-
-## Optional Lab 7: Model Lineage Tracking (20 min)
-
-CDP is an end-to-end hybrid enterprise data platform. Every user, workload, and dataset and  machine learning model can be governed from a central location via SDX, the Shared Data Experience.
-
-Under the hood, SDX tracks and secures activity related to each CDP Data Service via “Hooks” and “Plugins”, including Cloudera AI. If you want your models to be logged in SDX you have to add them to the lineage.yml file located in your project home folder.
-
-- Click on *Overview*  and find *lineage.yml* file
-- Click on the file to open
-
-![lin1](images/lin1.png)
-
-Take note of the metadata that is present here, including the source table name and the query used to create the training dataset. Additional metadata can be provided here.
-
-
-This gathered metadata can either be accessed in the Data Catalog (Tile is in the main menu) or Atlas.
-
-
-
-
-In order to access by means of Atlas you can use following steps:
-
-- Click on the top left corner menu (Bento menu)
-
-![lin2](images/lin2.png)
-
-- Click on *Management Console*
-- Click on the CDP environment you have been working in (where ML Workspace is deployed)
-- Click on *Atlas* under QUICK LINKS
-
-![linx](images/linx.png)
-
-From the Atlas UI, search for ML models by entering the *ml_model_build* type. Notice that there are various Atlas entities to browse for models.
-
-![lin4](images/lin4.png)
-
-
-In the output, you will see all models that your colleagues deployed in this workshop. Notice that each model is assigned a unique ID at the end. That ID corresponds to the Model Build from Cloudera AI. Identify your model using the Build Id noted down when you deployed your model. select the model you created.
-Open your model by clicking its Model Name - Build Id.
-
-![lin5](images/lin5.png)
-
-Familiarize yourself with the Model properties tab. Notice that each model logged is associated with rich metadata. You can customize Atlas Model metadata by editing the lineage.yml file in the Cloudera AI Project Home folder
-
-![lin6](images/lin6.png)
-
-
-![lin7](images/lin7.png)
-
-
-Atlas and Ranger provides a rich set of Governance and Security capabilities. For example, you can apply Atlas tags to your entities across Data Services and then propagate Ranger policies to automatically secure applications across complex pipelines.
-
-A detailed exploration of SDX in the context of Cloudera AI is not in scope for this workshop but please visit the “Next Steps” section to find out more on this and other topics.
-
-
-
-## Summary
-
-In this workshop you created an end to end project to support a Machine Learning model in Production.
-
-- You easily created a Spark Session and explored a large dataset with the PySpark library.
-- ... were able to switch between editors, resources, and optionally Python and Spark versions at the click of a button.
-- created a Model REST Endpoint to serve predictions to internal or external business applications.
-- Then, you built an interactive dashboard to make the “black box model” interpretable for your business stakeholders.
-- You explored the foundations of a basic ML Ops pipeline to easily retrain, monitor, and reproduce your model in production. With the Cloudera AI Models interface you unit tested and increased model observability.
-- Finally, you used CDP SDX to log and visualize Model Metadata and Lineage.
+.
 
