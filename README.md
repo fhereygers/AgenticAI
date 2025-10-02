@@ -239,8 +239,11 @@ Take some time and browse through the playback / logs and monitoring to understa
 We use Phoenix to instrument our workflows for observability. Phoenix is an open-source AI observability platform designed for experimentation, evaluation, and troubleshooting.
 Click on Monitoring to leverage Phoenix e.g. for troubleshooting
 
+<br/>
+<img src="images/tracedetails.png" width="90%">
+ <br/>
 
-
+All looks perfectly in order, so lets continue.
 
 ## Lab 5  Deploy Workflow 
 
