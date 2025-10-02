@@ -222,7 +222,7 @@ We are finished with the **Add Agents** step.
   
 
  <br/>
-<img src="images/configinput2.png" width="90%">
+<img src="images/configinput2.png" width="50%">
  <br/>
 
  Test the workflow with following test questions:
