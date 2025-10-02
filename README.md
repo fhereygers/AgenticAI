@@ -3,9 +3,6 @@ This repository contains all documentation and artifacts to setup the new genAI 
 
 The exercise guide (Labs) can be found in this readme markdown file.
 
-
-
-
 ## Project Structure
 
 The project is organized with the following folder structure:
@@ -18,7 +15,23 @@ The project is organized with the following folder structure:
 ├── tools /            # python tools that need be loaded into the tool template
 ```
 
-By following the exercises, you will understand how with cloudera AI you can author and deploy your own agentic workflows:
+## Use Case Intelli Banking
+
+<br/>
+<img src="images/usecase.png" width="90%">
+ <br/>
+
+**Use Case Scenario**: Intelli Banking delivers hyper-personalized banking experiences using AI Agents that analyze customer behavior, predict financial needs, review competitive offerings, and recommend the right products — all in real-time with Cloudera AI.
+
+**Objective**: Maximize customer lifetime value and drive product adoption by leveraging AI agents that proactively identify financial needs, deliver hyper-personalized recommendations, and adapt instantly to changing market dynamics.
+
+**Business Impact**: 
+- Enhanced Customer Engagement: AI-driven personalization boosts customer satisfaction and loyalty through tailored financial solutions.
+- Increased Revenue Opportunities: Real-time insights enable timely cross-sell and upsell, maximizing product adoption and lifetime value.
+- Competitive Agility: Continuous monitoring of market offers ensures your bank stays ahead with relevant, attractive products.
+- Operational Efficiency & Compliance: Automated analysis and decision-making reduce manual workload while ensuring transparent, auditable, and compliant processes.
+
+By following the lab exercises, you will understand how with cloudera AI you can author and deploy your own agentic workflows:
 
 - Create Workflow
 - by creating Agents
@@ -220,7 +233,7 @@ We are finished with the **Add Agents** step.
 Take some time and browse through the playback / logs and monitoring to understand how the agents cooperate together to get to the right answers.
 
 <br/>
-<img src="images/playback.png" width="70%">
+<img src="images/playback.png" width="90%">
  <br/>
 
 We use Phoenix to instrument our workflows for observability. Phoenix is an open-source AI observability platform designed for experimentation, evaluation, and troubleshooting.
@@ -254,7 +267,6 @@ and then ask following questions:
 - Test the workflow, by entering the previous questions.
 
 
------------------------------------------ THE END ----------------------
 
 
 
