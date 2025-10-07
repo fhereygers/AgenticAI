@@ -49,7 +49,7 @@ Welcome to the virtual hands on Lab of October 9th. 2025. You all have been assi
 Search for your first name and the initial of your last name and memorize the assigned user name.
 
 <br/>
-<img src="images/partlistsep.png" width="60%">
+<img src="images/teilnehmer.png" width="90%">
 <br/>
 <br/>
 
