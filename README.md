@@ -63,7 +63,7 @@ In case of success you should get to this home page of the CDP tenant:
 
 - Go to the Workshop CDP Tenant
 - Navigate to the CLoudera AI tile from the CDP Menu.
-- Click into the Workbench by clicking the Workbench name.
+- Click into the Workbench by clicking the Workbench name **hol-ai-workbench**.
 - 
 ![workspacelist](images/workbenchlist.png)
 
