@@ -247,6 +247,9 @@ All looks perfectly in order, so lets continue.
 
 ## Lab 5  Deploy Workflow 
 
+**FOR TODAYS LAB DO NOT DEPLOY YOUR WORKFLOW!!!!**
+
+
 Now Deploy your worklflow BUT also save your work as workflow template!
 
 Wait for the deployed workflow to be up and running.
