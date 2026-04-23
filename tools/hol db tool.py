@@ -4,7 +4,7 @@ and returns the output as a Pandas DataFrame in text format.
 """
 
 from textwrap import dedent
-from typing import Type
+from typing import Type, Optional
 from pydantic import BaseModel, Field
 from pydantic import BaseModel as StudioBaseTool  # Required for the tool to be recognized
 import argparse
@@ -19,10 +19,11 @@ class UserParameters(BaseModel):
     Define user parameters required for the tool.
     These parameters should be passed when initializing the tool instance.
     """
-    workload_user: str
-    workload_pass: str
-    hive_cai_data_connection_name: str
-    default_database: str  # 👈 Added this line
+    hive_cai_data_connection_name: str = Field(description="CDW connection name configured in CML")
+    workload_user: str = Field(description="Workload username for CDW")
+    workload_pass: str = Field(description="Workload password for CDW")
+    default_database: str = Field(description="Default Database")
+    cdsw_api_v2_key: Optional[str] = Field(default=None, description="CDSW API v2 key for authentication")
 
 
 class ToolParameters(BaseModel):
@@ -35,6 +36,13 @@ class ToolParameters(BaseModel):
 
 
 def run_tool(config: UserParameters, args: ToolParameters):
+  
+    if config.cdsw_api_v2_key:
+        # Update the session authentication in cmldata data module
+        cmldata.data.session.auth = (config.cdsw_api_v2_key, "")
+        # Also set environment variable for consistency
+        os.environ["CDSW_APIV2_KEY"] = config.cdsw_api_v2_key
+  
     conn = cmldata.get_connection(
         config.hive_cai_data_connection_name,
         parameters={
