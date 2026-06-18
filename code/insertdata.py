@@ -90,12 +90,14 @@ cust_data.printSchema()
 
 cust_data.write.format("parquet").mode("overwrite").saveAsTable(hive_table)
 
+#
+# Verification
+# 
 
+spark.sql("show databases").show()
+spark.sql("use onlinebanking").show()
+spark.sql("show tables").show()
 
-
-
-
-# spark.sql("show databases").show()
 
 
 
